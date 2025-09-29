@@ -1,0 +1,62 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+:root{
+    --cor_fundo1: #5c3582;
+    --cor_fundo2: #4c8e99;
+    --cor_fundo3: #5f2c82;
+    --cor1: #ffffff;
+    --cor_button: #2d6462;
+    --fonte: "Oswald";
+}
+*{
+    margin: 0;
+    padding: 0%;
+    overflow: hidden;
+    font-family: var(--fonte);
+}
+body{
+    background: linear-gradient(150deg, var(--cor_fundo1), var(--cor_fundo2));
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+.main{
+    display: flex;
+    margin: 30px;
+    border-radius: 10px;
+}
+.dados_cliente{
+    background-color: var(--cor1);
+    box-shadow: 1px 1px 1px 1px black;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#buttonForm{
+    background-color: var(--cor_button);
+    padding: 20px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+#buttonForm:hover{
+    transition: 0.4s;
+    transform: scale(1.1);
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+input[type="email"], input[type="password"]{
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.img > img{
+    border-radius: 0px 10px 10px 0px;
+}

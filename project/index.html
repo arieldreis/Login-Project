@@ -1,11 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Login</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
 </head>
 <body>
-    
+    <main class="main">
+        <section class="dados_cliente">
+            <h1>Login</h1>
+            <p>Seja bem-vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente.</p>
+            <form action="/form" method="post" class="form">
+                <div class="campo">
+                    <i class="fa-solid fa-user"></i>
+                    <input type="email" name="emailuser" id="idemail" placeholder="seu e-mail">
+                </div>
+                <div class="campo">
+                    <i class="fa-solid fa-key"></i>
+                    <input type="password" name="passworduser" id="idpassword" placeholder="sua senha">
+                </div>
+                <button type="submit" id="buttonForm">Entrar</button>
+                <button clas>Esqueci a Senha</button>
+            </form>
+        </section>
+        <div class="img">
+            <img src="assets/new-york-1745089_640.jpg" alt="Imagem de um prédio">
+        </div>
+    </main>
 </body>
 </html>

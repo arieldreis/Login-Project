@@ -12,7 +12,6 @@
 *{
     margin: 0;
     padding: 0%;
-    overflow: hidden;
     font-family: var(--fonte);
 }
 body{
@@ -30,11 +29,17 @@ body{
 }
 @media (max-width: 860px) {
     body{
-        background-color: var(--cor_fundo3);
+        background: var(--cor_fundo3);
     }
     .main{
         display: flex;
         flex-direction: column-reverse;
+    }
+    .img > img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 15px 15px 15px 15px;
     }
 }
 .dados_cliente{
@@ -86,7 +91,10 @@ input[type="password"]:focus {
     box-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
 }
 .img > img{
-    border-radius: 0px 10px 10px 0px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0 15px 15px 0;
 }
 #forgot_password{
    background-color: transparent;

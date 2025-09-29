@@ -76,6 +76,7 @@ body{
 }
 input[type="email"], 
 input[type="password"] {
+    background-color: rgb(148, 207, 205);
     padding: 15px;
     border-radius: 10px;
     margin: 10px 0;
@@ -89,6 +90,7 @@ input[type="password"]:focus {
     outline: none;
     border: 1px solid var(--cor2);
     box-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
+    background-color: var(--cor1);
 }
 .img > img{
     width: 100%;
@@ -113,4 +115,12 @@ input[type="password"]:focus {
 }
 #pCenter{
     text-align: center;
+}
+.campo{
+    background-color: var(--cor_fundo3);
+    padding: 5px;
+    border: 10px;
+    border-radius: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }

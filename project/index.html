@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projeto Login</title>
-    
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=account_box" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=key" />
 </head>
 <body>
     <main class="main">
@@ -15,15 +16,15 @@
             <p id="pCenter">Seja bem-vindo(a) novamente. Faça login para acessar sua conta e poder fazer as configurações no seu ambiente.</p>
             <form action="/form" method="post" class="form">
                 <div class="campo">
-                    <i class="fa-solid fa-user"></i>
+                    <span class="material-symbols-outlined">account_box</span>
                     <input type="email" name="emailuser" id="idemail" placeholder="seu e-mail">
                 </div>
                 <div class="campo">
-                    <i class="fa-solid fa-key"></i>
+                    <span class="material-symbols-outlined">key</span>
                     <input type="password" name="passworduser" id="idpassword" placeholder="sua senha">
                 </div>
                 <button type="submit" id="buttonForm">Entrar</button>
-                <button id="forgot_password">Esqueci a Senha</button>
+                <button id="forgot_password">Esqueceu Senha ✉️</button>
             </form>
         </section>
         <div class="img">

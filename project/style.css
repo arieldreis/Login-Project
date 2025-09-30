@@ -9,50 +9,36 @@
     --cor_button: #2d6462;
     --fonte: "Oswald";
 }
-@font-face {
-  font-family: 'Material Symbols Outlined';
-  font-style: normal;
-  font-weight: 100 700;
-  src: url(https://fonts.gstatic.com/icon/font?kit=kJEhBvYX7BgnkSrUwT8OhrdQw4oELdPIeeII9v6oFsL7B4gzZ2CBjcbulZc&skey=b8dc2088854b122f&v=v284) format('woff2');
-}
-
 *{
     margin: 0;
-    padding: 0%;
+    padding: 0;
     font-family: var(--fonte);
+    box-sizing: border-box;
 }
 body{
-    background: linear-gradient(150deg, var(--cor_fundo1), var(--cor_fundo2));
+    background: linear-gradient(to top, var(--cor_fundo1), var(--cor_fundo2));
     background-repeat: no-repeat;
-    background-position: center center;
     background-attachment: fixed;
+    min-height: 100vh;
 }
 .main{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 30px;
-    border-radius: 10px;
+    height: 100vh;
+    max-width: 1000px;
+    margin: auto;
 }
-@media (max-width: 860px) {
-    body{
-        background: var(--cor_fundo3);
-    }
-    .main{
-        display: flex;
-        flex-direction: column-reverse;
-    }
-    .img > img{
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: 15px 15px 15px 15px;
-    }
+.container{
+    max-width: 400px;
+    flex-grow: 1;
+    /* box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2); */
 }
 .dados_cliente{
     background-color: var(--cor1);
-    box-shadow: 1px 1px 1px 1px black;
+    box-shadow: 1px 1px 5px 1px rgba(0, 0, 0, 0.2);
     padding: 20px;
+    border-radius: 15px 0 0 15px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -68,10 +54,11 @@ body{
     margin: 15px 0;
     font-size: 1rem;
     transition: transform 0.3s ease, background-color 0.3s ease;
+    width: 100%;
 }
 
 #buttonForm:hover{
-    transform: translateY(-3px) scale(1.05);
+    transform: translateY(-3px) scale(1.02);
     background-color: #1f4b49;
     border-radius: 5px;
 }
@@ -83,6 +70,7 @@ body{
 }
 .campo{
     background-color: var(--cor_fundo3);
+    padding: 5px;
     padding-right: 10px;
     padding-left: 10px;
     border: 10px;
@@ -90,13 +78,14 @@ body{
     margin-top: 20px;
     margin-bottom: 20px;
     display: flex;
+    align-items: center;
 }
-input[type="email"], 
-input[type="password"] {
+.campo input[type="email"], 
+.campo input[type="password"] {
     background-color: rgb(148, 207, 205);
     padding: 10px;
-    border-radius: 10px;
-    margin: 10px 0;
+    border-radius: 5px;
+    margin: 0;
     border: 1px solid #ccc;
     transition: all 0.3s ease;
     width: 90%;
@@ -109,16 +98,23 @@ input[type="password"]:focus {
     box-shadow: 0 0 8px rgba(0, 255, 255, 0.6);
     background-color: var(--cor1);
 }
+.img{
+    overflow: hidden;
+    max-width: 600px;
+    flex-grow: 1;
+    height: 67.5%;
+}
 .img > img{
     width: 100%;
     height: 100%;
     object-fit: cover;
     border-radius: 0 15px 15px 0;
+    display: block;
 }
 #forgot_password{
-   background-color: transparent;
-    color: var(--cor2);
-    border: 1px solid var(--cor2);
+    background-color: transparent;
+    color: var(--cor_button);
+    border: 1px solid var(--cor_button);
     padding: 12px 20px;
     cursor: pointer;
     border-radius: 5px;
@@ -127,20 +123,47 @@ input[type="password"]:focus {
 }
 #forgot_password:hover{
     background-color: rgb(61, 243, 243);
-    transition: 1s;
+    transition: 0.3s;
     color: var(--cor1);
 }
 #pCenter{
     text-align: center;
+    margin-bottom: 20px;
 }
 span.material-symbols-outlined {
     font-variation-settings:
     'FILL' 0,
     'wght' 400,
     'GRAD' 0,
-    'opsz' 50;
+    'opsz' 40;
     ;
     color: var(--cor1);
     margin-right: 10px;
-    font-size: 60px;
+    font-size: 40px;
+    padding-left: 10px;
+}
+@media (max-width: 860px) {
+    body{
+        background: var(--cor_fundo3);
+    }
+    .main{
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+        margin: 30px 0;
+    }
+    .container, .img{
+        width: 90%; 
+        max-width: 400px; 
+        margin: 0 auto; 
+    }
+    .dados_cliente{
+        border-radius: 0 0 15px 15px;
+        margin-bottom: 20px;
+    }
+    .img > img{
+        border-radius: 15px 15px 0px 0px; 
+        width: 100%; 
+        height: auto; 
+    }
 }

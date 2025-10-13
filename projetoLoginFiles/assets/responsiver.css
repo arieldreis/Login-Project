@@ -1,0 +1,12 @@
+@media (max-width: 860px) {
+    body{
+        background: var(--cor_fundo3);
+    }
+    .container{
+        flex-direction: column-reverse;
+    }
+    .photoBuilding{
+        width: 100%;
+        height: 200px;
+    }
+}
